@@ -223,12 +223,12 @@ export default function FormPage() {
                 <TextField
                   name="fullName"
                   className="input h-14 rounded text-2xl p-4 mt-2 bg-gray-300"
-                  errorClassName="input error"
+                  errorClassName="input error h-14 rounded text-2xl p-4 mt-2 bg-gray-300"
                   type="text"
                   placeholder="Nguyễn Văn A"
                   validation={{ required: true }}
                 />
-                <FieldError name="fullName" className="error-message" />
+                <FieldError name="fullName" className="error-message " />
               </div>
               {/* <div className="flex flex-col mt-8">
                 <Label

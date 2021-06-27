@@ -344,3 +344,7 @@
     padding-bottom: 0;
   }
 }
+
+.error-message{
+  color: red;
+}
