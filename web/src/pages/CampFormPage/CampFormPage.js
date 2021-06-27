@@ -186,16 +186,14 @@ export default function FormPage() {
                 <em>Quy Định</em>
               </h2>
               <ul className="mt-4 text-lg">
-                <li className="mt-2">
-                  * Nhận đăng ký và hoàn tất lệ phí: 04/04/2020 - 18/04/2020
-                </li>
+                <li className="mt-2">* Nhận đăng ký và hoàn tất lệ phí:</li>
               </ul>
               <h2 className="mt-4 text-lg font-semibold">
                 <em>Thời gian & Địa điểm</em>
               </h2>
               <ul className="mt-4 text-lg">
                 <li className="mt-2">* 00h00 - 00h00</li>
-                <li className="mt-2">* Khu du lịch ....</li>
+                <li className="mt-2">* Nhà thờ Tin Lành Gia Định</li>
               </ul>
             </div>
             <div className="mt-8">
@@ -304,8 +302,8 @@ export default function FormPage() {
                     className="h-14 rounded text-2xl p-4 mt-2 bg-gray-300"
                     name="yearOfBirth"
                     placeholder="năm"
-                    max={2010}
-                    min={1980}
+                    max={2019}
+                    min={2009}
                     validation={{ required: true }}
                   />
                 </div>
@@ -327,7 +325,6 @@ export default function FormPage() {
                   className="h-14 rounded text-2xl p-4 mt-2 bg-gray-300"
                   name="specialCare"
                   placeholder=""
-                  validation={{ required: true }}
                 />
               </div>
               <div className="flex flex-col mt-8">
