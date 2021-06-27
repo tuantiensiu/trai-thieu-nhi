@@ -210,8 +210,7 @@ export default function FormPage() {
             <div>
               <h3 className="text-lg font-semibold">Thông tin cá nhân</h3>
               <span className="text-gray-500 text-opacity-75">
-                Bao gồm các thông tin cơ bản về bạn để BTC đăng ký thủ tục xe,
-                lều trại, chia lều...
+                Bao gồm các thông tin cơ bản về bé để ban tổ chức nắm
               </span>
             </div>
             <div className="">
@@ -357,14 +356,14 @@ export default function FormPage() {
               <h3 className="text-lg font-semibold">
                 Thông tin lớp Trường Chúa Nhật
               </h3>
-              <span className="text-gray-500 text-opacity-75">
+              {/* <span className="text-gray-500 text-opacity-75">
                 Chọn nhóm nhỏ bạn đang sinh hoạt, thời gian bạn nhóm lại tại Ban
                 thanh niên Gia Định
-              </span>
+              </span> */}
             </div>
             <div className="">
               <div className="flex flex-col">
-                <label className="text-lg">Nhóm nhỏ</label>
+                <label className="text-lg">Bé học lớp</label>
                 <GridRadio
                   // eslint-disable-next-line prefer-spread
                   list={FORM_MODELS.classRoom}
@@ -372,14 +371,14 @@ export default function FormPage() {
                   onSelect={(value) => onChangeRadio('class')(value)}
                 />
               </div>
-              <div className="flex flex-col mt-8">
+              {/* <div className="flex flex-col mt-8">
                 <label className="text-lg">Thời gian nhóm lại</label>
                 <GridRadio
                   list={FORM_MODELS.joinAge}
                   cols={2}
                   onSelect={(value) => onChangeRadio('joinAge')(value)}
                 />
-              </div>
+              </div> */}
             </div>
           </div>
           <hr className="mt-8 bg-gray-700" />
@@ -429,8 +428,10 @@ export default function FormPage() {
                 />
 
                 <strong className="mt-4">
-                  Chi tiết về việc đăng ký liên hệ Thủ quỹ Ban Thanh Niên:
-                  <span className="text-green-500"> Như Ngọc 0902457367</span>
+                  Chi tiết về việc đăng ký liên hệ Thủ quỹ Ban Thiếu Nhi:
+                  <span className="text-green-500">
+                    ĐOÀN THỊ MỸ THỌ 0936 135 310
+                  </span>
                 </strong>
               </div>
             </div>
