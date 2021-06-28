@@ -226,7 +226,7 @@ export const smsSend = async ({ profileId, message }) => {
     const phoneNumber =
       process.env.NODE_ENV === 'production'
         ? draftProfile.phoneNumber
-        : '0772010496'
+        : '0979164197'
     // const phoneNumber = '0772010496'
     const result = await sendSMS(phoneNumber, message)
     // const result = { SMSID: '12345' }

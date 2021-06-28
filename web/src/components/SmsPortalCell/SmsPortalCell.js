@@ -67,22 +67,22 @@ const SEND_SMS_MUTATION = gql`
   }
 `
 
-const bankProvider = 'Techcombank'
-const bankID = `19036831320015`
-const bankName = `TRUONG THANH NHU NGOC`
-const contact = '0902457367'
+const bankProvider = 'Agribank'
+const bankID = `6100205502723 `
+const bankName = `DOAN THI MY THO`
+const contact = '0936135310'
 const bankInfo = `${bankID}/${bankProvider}/${bankName}`
 
 const SMS_TEMPLATES = {
   byEvents: [
-    `Bạn đã đăng ký trại {camp}, {fullName}. Vui lòng {action} {amount} qua STK: {bankStatement},nội dung CK: {transactionCode} trong vòng {remainDay} ngày kể từ ngày đăng ký và hoàn tất lệ phí trước ngày {deadlineDay}. Sau {remainDay} ngày hệ thống sẽ tự hủy đơn đăng ký nếu bạn chưa {action}. Chi tiết liên hệ {contact}.`,
-    `Bạn đã đăng ký trại {camp}, {fullName}. Vui lòng {action} {amount} cho {who} trong vòng {remainDay} ngày kể từ ngày đăng ký và hoàn tất lệ phí trước ngày {deadlineDay}. Sau {remainDay} ngày hệ thống sẽ tự hủy đơn đăng ký nếu bạn chưa {action}. Chi tiết liên hệ {contact}.`,
+    `Bạn đã đăng ký trại {camp} TKH thành công. Vui lòng {action} {amount} qua STK: {bankStatement},nội dung CK: {transactionCode} trong vòng {remainDay} ngày kể từ ngày đăng ký và hoàn tất lệ phí trước ngày {deadlineDay}. Sau {remainDay} ngày hệ thống sẽ tự hủy đơn đăng ký nếu bạn chưa {action}. Chi tiết liên hệ {contact}.`,
+    `Bạn đã đăng ký trại {camp} TKH thành công. Vui lòng {action} {amount} cho {who} trong vòng {remainDay} ngày kể từ ngày đăng ký và hoàn tất lệ phí trước ngày {deadlineDay}. Sau {remainDay} ngày hệ thống sẽ tự hủy đơn đăng ký nếu bạn chưa {action}. Chi tiết liên hệ {contact}.`,
   ],
   byManual: [
-    'BTC chuong trinh trai {camp} da nhan duoc le phi {balance} tu ban. Chuc ban co ki trai y nghia va phuoc hanh, hay lien he thu quy Nhu Ngoc de nhan bien lai.',
+    'BTC chuong trinh trai {camp} da nhan duoc le phi {balance} tu ban. Chuc ban co ki trai y nghia va phuoc hanh, hay lien he thu quy My Tho de nhan bien lai.',
     'BTC chuong trinh trai {camp} da nhan duoc le phi {balance}, ban can nop them {negativeBalance} de hoan tat le phi.',
     'Hien tai BTC trai {camp} van chua nhan duoc khoan thanh toan le phi tu ban. Vui long CK so tien {paymentLevel} qua STK: {bankInfo} - Noi dung CK: {transactionCode} hoac nop truc tiep cho thu quy truoc 18/04. Chi tiet lien he {contact}',
-    'Chi {hour} tieng nua la den ki trai LINK cua chung ta. Ban nho chuan bi hanh ly bao gom: quat, ban chai, khan tam, dep lao - {shortName} se di chuyen bang {busInfo}, truong xe {busLeader} va o {roomInfo}, truong phong {roomLeader}. Than ai!',
+    'Chi {hour} tieng nua la den ki trai TKH cua chung ta. Ban nho chuan bi hanh ly bao gom: quat, ban chai, khan tam, dep lao - {shortName} se di chuyen bang {busInfo}, truong xe {busLeader} va o {roomInfo}, truong phong {roomLeader}. Than ai!',
   ],
 }
 
@@ -186,7 +186,7 @@ export const Success = ({ sms }) => {
   )
 
   const variables = {
-    camp: 'LINK',
+    camp: 'TKH',
     fullName: profile.fullName,
     name: khongdau(profile.fullName.split(' ').slice(-2).join(' ')),
     amount: currency(meta.amount),
