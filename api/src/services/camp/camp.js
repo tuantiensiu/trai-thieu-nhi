@@ -80,8 +80,8 @@ export const getMessage = (formPayload) => {
   const contact = '0902457367'
   const camp = 'TKH'
   const action = paymentStage === 'FULL' ? 'nộp lệ phí' : 'nộp cọc'
-  const bankProvider = 'Agribank Chi nhánh Thủ Đức'
-  const bankID = `6100205502723 `
+  const bankProvider = 'Agribank'
+  const bankID = `6100205502723`
   const bankName = `DOAN THI MY THO`
   const who =
     paymentMethod !== 'BANK'
